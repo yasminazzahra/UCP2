@@ -97,7 +97,6 @@
                         <td><?php echo $data['JumlahMasaKerja']; ?> Tahun</td>
                         <td>
                           <a style ="width: 100px; color: #FFF; background-color: #1b4332"href="detail.php?id=<?php echo $data['id']; ?>" id="detail"class="btn tombol ">DETAIL</a>
-                          <a style ="width: 100px; color: #FFF; background-color: #2d6a4f"href="print.php?id=<?php echo $data['id']; ?>" id="print" class="btn tombol ">PRINT</a>
                           <a style ="width: 100px; color: #FFF; background-color: #40916c"href="edit.php?id=<?php echo $data['id']; ?>" id="edit" class="btn tombol">EDIT</a>
                           <a style ="width: 100px; color: #FFF; background-color: #52b788"href="delete.php?id=<?php echo $data['id']; ?>" id="hapus" class="btn tombol " onclick="return confirm ('Anda Yakin Akan Menghapus Data Karyawan Ini ?')">HAPUS</a>
                         </td>
