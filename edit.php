@@ -32,7 +32,7 @@
   while($data = mysqli_fetch_assoc($karyawan)){
   ?>
     <div class="container mt-5">
-        <p><a href="index.php">Home</a> / Edit Karyawan / <?php echo $data['Nama'] ?></p>
+        <p><a href="index.php">Home</a> / Edit Karyawan / <?php echo $data['id'] ?></p>
         <div class="card">
             <div class="card-header">
                 <p class="fw-bold">Profil Karyawan</p>
@@ -40,7 +40,7 @@
             <div class="card-body fw-bold">
                 <form  method="post" action="update.php"> 
                     <div class="mb-3">
-                        <input type="text" class="form-control" name="NoKTP" value="<?php echo $data['NoKTP']; ?>">
+                      <input type="hidden" class="form-control" name="id" value="<?php echo $data['id']; ?>">
                     </div>
                     <div class="mb-3">
                         <label for="Nama" class="form-label">Nama</label>
@@ -60,7 +60,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="JumlahMasaKerja" class="form-label">Jumlah Masa Kerja</label>
-                        <input type="text" class="form-control" id="JumlahMasaKerja" placeholder="Masukkan Jumlah Masa Kerja" name="JumalhMasaKerja" value="<?php echo $data['JumlahMasaKerja']; ?>">
+                        <input type="text" class="form-control" id="JumlahMasaKerja" placeholder="Masukkan Jumlah Masa Kerja" name="JumlahMasaKerja" value="<?php echo $data['JumlahMasaKerja']; ?>">
                     </div>
                     <button type="submit" class="btn btn-primary" values="SIMPAN">Update</button>
                 </form>

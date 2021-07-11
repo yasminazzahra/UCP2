@@ -19,7 +19,7 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ms-auto">
         <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="login.php">Login</a>
+        <a class="nav-link" href="index.php">Logout</a>
       </div>
     </div>
   </div>
@@ -27,16 +27,13 @@
 
   <div class="container data-karyawan mt-5">
     <!-- Button trigger modal -->
-  <button style ="color: #FFF; background-color:10451d #1b4332" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tambahData">
-    Input Data
-  </button>
 
   <!-- Modal -->
   <div class="modal fade" id="tambahData" tabindex="-1" aria-labelledby="tambahDatalabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
        <form action="create.php" method="post" name="form" >
-          <div style="background-color:#081c15" class="modal-header">
+          <div class="modal-header">
             <h5 class="modal-title" id="tambahDatalabel">Input Data</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
@@ -69,7 +66,7 @@
   </div>
 
 
-  <div class="container data-karyawan mt-5">
+  <div style="background-color:#92e6a7;" class="container data-karyawan mt-5">
     <table class="table table-striped" id="datakaryawan">
         <thead>
             <tr>
@@ -95,11 +92,6 @@
                         <td><?php echo $data['NoTelp']; ?></td>
                         <td><?php echo $data['TahunMasuk']; ?></td>
                         <td><?php echo $data['JumlahMasaKerja']; ?> Tahun</td>
-                        <td>
-                          <a style ="width: 100px; color: #FFF; background-color: #1b4332"href="detail.php?id=<?php echo $data['id']; ?>" id="detail"class="btn tombol ">DETAIL</a>
-                          <a style ="width: 100px; color: #FFF; background-color: #40916c"href="edit.php?id=<?php echo $data['id']; ?>" id="edit" class="btn tombol">EDIT</a>
-                          <a style ="width: 100px; color: #FFF; background-color: #52b788"href="delete.php?id=<?php echo $data['id']; ?>" id="hapus" class="btn tombol " onclick="return confirm ('Anda Yakin Akan Menghapus Data Karyawan Ini ?')">HAPUS</a>
-                        </td>
                       </tr>
                       <?php
                     }

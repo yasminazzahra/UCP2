@@ -22,5 +22,6 @@
 	<label style="color:#40916c;"><?php echo $_GET['pesan']; ?></label>
 	<?php } ?>	
 	</center>
+	<footer style="justify-content:center; color:#1b4332;"id="footer">Email:yasmina@gmail.com Password:1234</footer>
 </body>
 </html>
